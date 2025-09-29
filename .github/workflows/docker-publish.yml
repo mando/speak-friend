@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: mando/speak-friend:latest
+          tags: ghcr.io/mando/speak-friend:latest

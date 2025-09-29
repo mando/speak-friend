@@ -6,8 +6,11 @@ help:
 run: ## Run speak-friend
 	@deno run --allow-read --allow-net main.ts
 
-build-docker: ## bBuild docker container for speak-friend
-	@docker build -t speak-friend .
+build-docker: ## Build docker container
+	@docker build -t speak-friend -t ghcr.io/mando/speak-friend:latest .
 
-run-docker: ## Run docker container for speak-frield
-	@docker run --rm -it -p 8080:8080 speak-friend
+run-docker: ## Run docker container
+	@docker run --rm -it -p 8080:8080 ghcr.io/mando/speak-friend
+
+push-docker: ## Push docker container
+	@docker push ghcr.io/mando/speak-friend:latest
